@@ -1,6 +1,8 @@
 const $logger = require("./Logger.js")
 const { getCycleTLSInstance } = require("./CycleTls")
 const { requestsFingerprints } = require("../requestsFingerprints.js")
+const fs = require('fs')
+const path = require('path')
 
 const headers = {
   Accept:

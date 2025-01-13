@@ -20,11 +20,12 @@ const main = async () => {
   $logger.info("Program started")
   await createTables()
   await initializeCycleTLS()
+  console.log('Running scraper')
   runScraper()
 }
 
 main()
 
-cron.schedule(config.interval, () => {
-  runScraper()
-})
+// cron.schedule(config.interval, () => {
+//   runScraper()
+// })

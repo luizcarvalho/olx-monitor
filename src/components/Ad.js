@@ -98,11 +98,11 @@ class Ad {
                 const msg = 'Price drop found! ' + decreasePercentage + '% OFF!\n' +
                     'From R$' + this.saved.price + ' to R$' + this.price + '\n\n' + this.url
 
-                try {
-                    await notifier.sendNotification(msg, this.id)
-                } catch (error) {
-                    $logger.error(error)
-                }
+                // try {
+                //     await notifier.sendNotification(msg, this.id)
+                // } catch (error) {
+                //     $logger.error(error)
+                // }
             }
         }
     }

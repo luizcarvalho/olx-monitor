@@ -24,7 +24,7 @@ const scraper = async (url) => {
 
     const parsedUrl = new URL(url)
     const searchTerm = parsedUrl.searchParams.get('q') || ''
-    const notify = await urlAlreadySearched(url)
+    const notify = false ; // await urlAlreadySearched(url)
     $logger.info(`Will notify: ${notify}`)
 
     do {
@@ -58,8 +58,9 @@ const scraper = async (url) => {
             minPrice,
             maxPrice,
         }
-
-        await scraperRepository.saveLog(scrapperLog)
+        process.exit(0)
+        // TODO: reactivate this
+        // await scraperRepository.saveLog(scrapperLog)
     }
 }
 
