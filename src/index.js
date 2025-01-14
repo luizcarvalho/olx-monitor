@@ -19,6 +19,7 @@ const runScraper = async () => {
 const main = async () => {
   $logger.info("Program started")
   await createTables()
+  console.log('Initialize TLS');
   await initializeCycleTLS()
   console.log('Running scraper')
   runScraper()

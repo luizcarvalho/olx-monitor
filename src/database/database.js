@@ -1,11 +1,22 @@
 const path = require('path')
 const config = require('../config')
 const sqlite = require("sqlite3").verbose()
-const db = new sqlite.Database(
-  path.join(__dirname, '../', config.dbFile)
-)
+
+const dbPath = path.join(__dirname, '../', config.dbFile);
+console.log('Database path:', dbPath);
+
+// Create the SQLite database connection
+const db = new sqlite.Database(dbPath, (err) => {
+  if (err) {
+    console.error('Error connecting to the database:', err.message);
+  } else {
+    console.log('Database connection successful!');
+  }
+});
+
 
 const createTables = async () => {
+
 
   // Define separate SQL statements for each table creation
   const queries = [
@@ -35,6 +46,7 @@ const createTables = async () => {
   return new Promise(function(resolve, reject) {
     // Iterate through the array of queries and execute them one by one
     const executeQuery = (index) => {
+     
       if (index === queries.length) {
         resolve(true); // All queries have been executed
         return;
