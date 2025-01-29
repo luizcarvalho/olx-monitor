@@ -26,6 +26,9 @@ const createTables = async () => {
         "searchTerm"    TEXT NOT NULL,
         "title"	        TEXT NOT NULL,
         "price"         INTEGER NOT NULL,
+        "size"          INTEGER NOT NULL,
+        "location_city"      TEXT NOT NULL,
+        "location_neighbourhood"      TEXT NOT NULL,
         "url"           TEXT NOT NULL,
         "created"       TEXT NOT NULL,
         "lastUpdate"    TEXT NOT NULL

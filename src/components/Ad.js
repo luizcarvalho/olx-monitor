@@ -16,6 +16,9 @@ class Ad {
         this.valid      = false
         this.saved      = null,
         this.notify     = ad.notify
+        this.size       = ad.size
+        this.location_city = ad.location_city
+        this.location_neighbourhood = ad.location_neighbourhood
     }
 
     process = async () => {

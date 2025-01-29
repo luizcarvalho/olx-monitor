@@ -80,8 +80,8 @@ const createAd = async (ad) => {
     $logger.debug('adRepositorie: createAd')
 
     const query = `
-        INSERT INTO ads( id, url, title, searchTerm, price, created, lastUpdate )
-        VALUES( ?, ?, ?, ?, ?, ?, ? )
+        INSERT INTO ads( id, url, title, searchTerm, price, created, lastUpdate, size, location_city, location_neighbourhood )
+        VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
     `
 
     const now = new Date().toISOString()
@@ -93,7 +93,10 @@ const createAd = async (ad) => {
         ad.searchTerm,
         ad.price,
         now,
-        now
+        now,
+        ad.size,
+        ad.location_city,
+        ad.location_neighbourhood
     ]
 
     return new Promise(function (resolve, reject) {

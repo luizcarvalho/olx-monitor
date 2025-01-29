@@ -87,10 +87,14 @@ const scrapePage = async ($, searchTerm, notify) => {
 
             $logger.debug('Checking ad: ' + (i + 1))
 
+
             const advert = adList[i]
             const title = advert.subject
             const id = advert.listId
             const url = advert.url
+            const location_city = advert.locationDetails?.municipality
+            const location_neighbourhood = advert.locationDetails?.neighbourhood
+            const size = getSizeValue(advert)
             const price = parseInt(advert.price?.replace('R$ ', '')?.replace('.', '') || '0')
 
             const result = {
@@ -99,7 +103,10 @@ const scrapePage = async ($, searchTerm, notify) => {
                 title,
                 searchTerm,
                 price,
-                notify
+                notify,
+                size,
+                location_city,
+                location_neighbourhood
             }
 
             const ad = new Ad(result)
@@ -119,6 +126,17 @@ const scrapePage = async ($, searchTerm, notify) => {
         throw new Error('Scraping failed');
     }
 }
+
+const getSizeValue = (item) => {
+    // Try to find size in properties array
+    const sizeProperty = item.properties?.find(prop => prop.name === 'size')?.value;
+    if (sizeProperty) {
+      // Extract just the number from strings like "420m²"
+      const matches = sizeProperty.match(/(\d+)/);
+      return matches ? parseInt(matches[0]) : 0;
+    }
+    return 0;
+  };
 
 const urlAlreadySearched = async (url) => {
     try {
