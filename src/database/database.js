@@ -29,6 +29,7 @@ const createTables = async () => {
         "size"          INTEGER NOT NULL,
         "location_city"      TEXT NOT NULL,
         "location_neighbourhood"      TEXT NOT NULL,
+        "real_state_type"      TEXT NOT NULL,
         "url"           TEXT NOT NULL,
         "created"       TEXT NOT NULL,
         "lastUpdate"    TEXT NOT NULL

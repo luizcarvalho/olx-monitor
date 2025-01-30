@@ -19,6 +19,7 @@ class Ad {
         this.size       = ad.size
         this.location_city = ad.location_city
         this.location_neighbourhood = ad.location_neighbourhood
+        this.real_state_type = ad.real_state_type
     }
 
     process = async () => {
@@ -86,7 +87,7 @@ class Ad {
     }
 
     checkPriceChange = async () => {
-
+        // await this.updatePrice(this)
         if (this.price !== this.saved.price) {
 
             await this.updatePrice(this)

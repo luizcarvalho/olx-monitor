@@ -96,6 +96,8 @@ const scrapePage = async ($, searchTerm, notify) => {
             const location_neighbourhood = advert.locationDetails?.neighbourhood
             const size = getSizeValue(advert)
             const price = parseInt(advert.price?.replace('R$ ', '')?.replace('.', '') || '0')
+            const real_state_type = advert.properties?.find(prop => prop.name === 'real_estate_type')?.value;
+
 
             const result = {
                 id,
@@ -106,7 +108,8 @@ const scrapePage = async ($, searchTerm, notify) => {
                 notify,
                 size,
                 location_city,
-                location_neighbourhood
+                location_neighbourhood,
+                real_state_type
             }
 
             const ad = new Ad(result)

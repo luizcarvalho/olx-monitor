@@ -1,0 +1,109 @@
+{
+  "subject": "Lote Comercial - ARSO 111",
+  "title": "Lote Comercial - ARSO 111",
+  "price": "R$ 200.000",
+  "listId": 1267092451,
+  "lastBumpAgeSecs": "632104",
+  "oldPrice": null,
+  "professionalAd": true,
+  "priceReductionBadge": false,
+  "userGoogleReviewsVisible": false,
+  "userGoogleRating": null,
+  "isFeatured": false,
+  "listingCategoryId": "1100",
+  "images": [
+    {
+      "original": "https://img.olx.com.br/images/23/234487243049321.jpg",
+      "originalAlt": "Lote Comercial - ARSO 111",
+      "originalWebP": "https://img.olx.com.br/images/23/234487243049321.webp",
+      "thumbnail": "https://img.olx.com.br/thumbs/23/234487243049321.jpg"
+    },
+    {
+      "original": "https://img.olx.com.br/images/23/233433124920479.jpg",
+      "originalAlt": "Lote Comercial - ARSO 111 - Foto 2",
+      "originalWebP": "https://img.olx.com.br/images/23/233433124920479.webp",
+      "thumbnail": "https://img.olx.com.br/thumbs/23/233433124920479.jpg"
+    },
+    {
+      "original": "https://img.olx.com.br/images/23/238449241183888.jpg",
+      "originalAlt": "Lote Comercial - ARSO 111 - Foto 3",
+      "originalWebP": "https://img.olx.com.br/images/23/238449241183888.webp",
+      "thumbnail": "https://img.olx.com.br/thumbs/23/238449241183888.jpg"
+    }
+  ],
+  "videoCount": 0,
+  "isChatEnabled": true,
+  "fixedOnTop": false,
+  "url": "https://to.olx.com.br/tocantins/terrenos/lote-comercial-arso-111-1267092451",
+  "thumbnail": "https://img.olx.com.br/thumbs256x256/23/234487243049321.jpg",
+  "date": 1737545552,
+  "imageCount": 3,
+  "location": "Palmas, Plano Diretor Sul",
+  "locationDetails": {
+    "municipality": "Palmas",
+    "ddd": "63",
+    "neighbourhood": "Plano Diretor Sul",
+    "uf": "TO"
+  },
+  "category": "Terrenos, sítios e fazendas",
+  "searchCategoryLevelZero": 1000,
+  "searchCategoryLevelOne": 1100,
+  "properties": [
+    {
+      "name": "category",
+      "label": "Categoria",
+      "value": "Terrenos, sítios e fazendas"
+    },
+    {
+      "name": "real_estate_type",
+      "label": "Tipo",
+      "value": "Terrenos"
+    },
+    {
+      "name": "size",
+      "label": "Tamanho",
+      "value": "144m²"
+    }
+  ],
+  "accountActivityStatus": {
+    "isOnline": true
+  },
+  "position": 49,
+  "olxPay": {
+    "enabled": false,
+    "goods": {
+      "imeiStatus": null
+    },
+    "dynamicBadgeProps": [],
+    "transactionalBadges": [],
+    "installments": [],
+    "isCategoryEligible": false
+  },
+  "olxPayBadgeEnabled": false,
+  "olxDelivery": {
+    "enabled": false,
+    "weight": null
+  },
+  "olxDeliveryBadgeEnabled": false,
+  "installments": false,
+  "vehicleReport": {
+    "enabled": false,
+    "title": null,
+    "description": null,
+    "reportLink": null,
+    "reportTitle": null,
+    "tags": null
+  },
+  "vehicleTags": [],
+  "vehicleHasInspectionReport": false,
+  "vehiclePills": null,
+  "isFavorited": false,
+  "hasRealEstateHighlight": false,
+  "trackingSpecificData": [
+    {
+      "key": "region",
+      "value": "Tocantins"
+    }
+  ],
+  "carSpecificData": null
+}

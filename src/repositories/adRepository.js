@@ -80,8 +80,8 @@ const createAd = async (ad) => {
     $logger.debug('adRepositorie: createAd')
 
     const query = `
-        INSERT INTO ads( id, url, title, searchTerm, price, created, lastUpdate, size, location_city, location_neighbourhood )
-        VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+        INSERT INTO ads( id, url, title, searchTerm, price, created, lastUpdate, size, location_city, location_neighbourhood, real_state_type )
+        VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
     `
 
     const now = new Date().toISOString()
@@ -96,7 +96,8 @@ const createAd = async (ad) => {
         now,
         ad.size,
         ad.location_city,
-        ad.location_neighbourhood
+        ad.location_neighbourhood,
+        ad.real_state_type
     ]
 
     return new Promise(function (resolve, reject) {
@@ -114,9 +115,11 @@ const createAd = async (ad) => {
 
 const updateAd = async (ad) => {
     $logger.debug('adRepositorie: updateAd')
-
-    const query = `UPDATE ads SET price = ?, lastUpdate = ?  WHERE id = ?`
-    const values = [ad.price, new Date().toISOString(), ad.id]
+    // Update size, location_city, location_neighbourhood, real_state_type, price, lastUpdate
+    // const query = `UPDATE ads SET price = ?, lastUpdate = ?  WHERE id = ?`
+    // const values = [ad.price, new Date().toISOString(), ad.id]
+    const query = `UPDATE ads SET size = ?,location_neighbourhood = ?, real_state_type = ?,  price = ?, lastUpdate = ?  WHERE id = ?`
+    const values = [ad.size, ad.location_neighbourhood, ad.real_state_type, ad.price, new Date().toISOString(), ad.id]
 
     return new Promise(function (resolve, reject) {
         db.run(query, values, function (error) {
